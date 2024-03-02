@@ -6,7 +6,7 @@
 <!-- 2024-03-01 Fri 18:20 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Gavin's Site</title>
+<title>Programming Philosophy</title>
 <meta name="author" content="Gavin Jaeger-Freeborn" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -201,70 +201,115 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Gavin's Site</h1>
-<div id="outline-container-org5aad8be" class="outline-2">
-<h2 id="org5aad8be">Welcome To My Website!</h2>
-<div class="outline-text-2" id="text-org5aad8be">
+<h1 class="title">Programming Philosophy</h1>
+<dl class="org-dl">
+<dt>Disclaimer</dt><dd>As with all thoughts they can change over time. What
+I may now hate I will one day love, what I now love I will probably
+end up hating.</dd>
+</dl>
+
+<div id="outline-container-org5ee975f" class="outline-2">
+<h2 id="org5ee975f">Expressions above all else</h2>
+<div class="outline-text-2" id="text-org5ee975f">
 <p>
-I know it's nothing special at the moment but figured create something.
+When performance and readability will be acceptable use expressions.
 </p>
-</div>
-</div>
 
-<div id="outline-container-orgd599301" class="outline-2">
-<h2 id="orgd599301">Files Of Interest</h2>
-<div class="outline-text-2" id="text-orgd599301">
 <p>
-Here is some example output from some of my projects
+Expressions allow us to better represent the state in types. In addition,
+it helps us keep assignments in one place. A <a href="https://en.wikipedia.org/wiki/Single_source_of_truth">single source of truth</a> if
+you will.
 </p>
-</div>
 
-<div id="outline-container-org8383c85" class="outline-3">
-<h3 id="org8383c85">RESUME</h3>
-<div class="outline-text-3" id="text-org8383c85">
-<ul class="org-ul">
-<li><a href="https://github.com/Gavinok/neatroff_toc">Source Code</a></li>
-<li>Example <a href="res.pdf">RESUME</a>
-<ul class="org-ul">
-<li><i>It's also my personal resume. If you are looking at hiring me.</i></li>
-</ul></li>
-</ul>
-</div>
-</div>
+<p>
+e.g.
+</p>
 
-<div id="outline-container-org039621f" class="outline-3">
-<h3 id="org039621f">TOC for Neatroff</h3>
-<div class="outline-text-3" id="text-org039621f">
-<ul class="org-ul">
-<li><a href="https://github.com/Gavinok/neatroff_toc">Source Code</a></li>
-<li>Example <a href="toc.pdf">TOC</a></li>
-</ul>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #8197bf;">if</span> x: tmp = 1
+<span style="color: #8197bf;">else</span>: tmp = <span style="color: #f4bf75;">None</span>
+</pre>
 </div>
-</div>
-
-<div id="outline-container-orgae725c8" class="outline-3">
-<h3 id="orgae725c8">More About Me</h3>
-<div class="outline-text-3" id="text-orgae725c8">
-<ul class="org-ul">
-<li><a href="hobbies.html">Hobbies</a></li>
-<li><a href="programming_philosophy.html">Programming Philosophy</a></li>
-</ul>
+<p>
+vs
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #CDCDCD;">tmp</span> = 1 <span style="color: #8197bf;">if</span> x <span style="color: #8197bf;">else</span> <span style="color: #f4bf75;">None</span>
+</pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgcda57e5" class="outline-2">
-<h2 id="orgcda57e5">Links</h2>
-<div class="outline-text-2" id="text-orgcda57e5">
-</div>
-<div id="outline-container-org7a2dcd8" class="outline-3">
-<h3 id="org7a2dcd8"><a href="https://github.com/Gavinok">Github</a> - Gavinok</h3>
-</div>
-<div id="outline-container-org628b9bc" class="outline-3">
-<h3 id="org628b9bc"><a href="https://www.youtube.com/c/GavinFreeborn/videos">YouTube</a> - Gavin Freeborn</h3>
-</div>
-<div id="outline-container-org3ad2542" class="outline-3">
-<h3 id="org3ad2542"><a href="https://www.linkedin.com/in/gavin-jf">LinkedIn</a></h3>
+
+<div id="outline-container-org20ea164" class="outline-2">
+<h2 id="org20ea164">How I try to balance my day</h2>
+<div class="outline-text-2" id="text-org20ea164">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">8h</td>
+<td class="org-left">Work</td>
+</tr>
+
+<tr>
+<td class="org-left">2h</td>
+<td class="org-left">Learning</td>
+</tr>
+
+<tr>
+<td class="org-left">1h</td>
+<td class="org-left">Gym</td>
+</tr>
+
+<tr>
+<td class="org-left">3h</td>
+<td class="org-left">Time with family and friends</td>
+</tr>
+
+<tr>
+<td class="org-left">1h</td>
+<td class="org-left">Travel (gotta get there somehow)</td>
+</tr>
+
+<tr>
+<td class="org-left">9h</td>
+<td class="org-left">Sleep</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Here is how I currently try to distribute my time.
+</p>
+
+<p>
+I make use of my "Learning" by noting them for myself with the goal of
+eventually consolidating them into a video.
+</p>
+
+<p>
+The value of sleep is more of a goal than what I get. I tend to lose
+out on sleep for recording a video, spending time with others, or
+work. All of which compete for my time.
+</p>
+
+<p>
+While I don't go to the gym every day I do some form of exercise for
+at least 1 hour every day. I am partial to paddling sports.
+</p>
 </div>
 </div>
 </div>
