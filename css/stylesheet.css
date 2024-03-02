@@ -1,0 +1,23 @@
+body {
+    font-family: monospace;
+    font-size: 1.2em;
+}
+
+div.outline-2 {
+    background-color: white;
+    padding-left: 10px;
+    /* width: 300px; */
+    border: 2px black;
+    border-style: solid;
+    margin: 2px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+ul {
+    padding-top: 10px
+}
+
+li {
+    list-style-type: square;
+    padding-bottom: 10px
+}
