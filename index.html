@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-05-02 Thu 12:26 -->
+<!-- 2024-05-02 Thu 12:31 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Gavin's Site</title>
@@ -202,6 +202,54 @@
 <body>
 <div id="content" class="content">
 <h1 class="title">Gavin's Site</h1>
+<div id="outline-container-orgcc35bb7" class="outline-2">
+<h2 id="orgcc35bb7">publish</h2>
+<div class="outline-text-2" id="text-orgcc35bb7">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">#!/usr/bin/emacs --script
+(require 'ox-publish)
+(require 'htmlize)
+(setq org-html-postamble nil)
+(setq org-export-with-section-numbers nil)
+(setq my/publish-dir "~/site_html/")
+(setq org-publish-project-alist
+      `(("org-site"
+         :base-directory "~/Documents/org/site/"
+         :publishing-directory ,my/publish-dir
+         :base-extension "org"
+         :publishing-directory "/ssh:gavinfre@unix.engr.uvic.ca:~/.www/"
+         :recursive t
+         :with-toc nil
+         :headline-levels nil
+         :html-head
+         "&lt;link rel=\"icon\"
+           href=\"images/icon.png\"&gt;
+          &lt;link rel=\"stylesheet\"
+           href=\"css/stylesheet.css\"
+           type=\"text/css\"/&gt;"
+         :publishing-function org-html-publish-to-html)
+        ("org-static"
+         :base-directory "~/Documents/org/site/"
+         :publishing-directory ,my/publish-dir
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+         :publishing-directory "/ssh:gavinfre@unix.engr.uvic.ca:~/.www/"
+         :recursive t
+         :publishing-function org-publish-attachment)
+        ("org" :components ("org-site" "org-static"))))
+(org-publish-project "org")
+(let ((default-directory my/publish-dir))
+  (cd my/publish-dir)
+  (async-shell-command "git add . &amp;&amp; git commit -m 'Update site' &amp;&amp; git push"))
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-bash">scp -r ~/site_html/* gavinfre@unix.engr.uvic.ca:/home/gavinfre/public_html/
+</pre>
+</div>
+</div>
+</div>
+
 <div id="outline-container-org5aad8be" class="outline-2">
 <h2 id="org5aad8be">Welcome To My Website!</h2>
 <div class="outline-text-2" id="text-org5aad8be">
