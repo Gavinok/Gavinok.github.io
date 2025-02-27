@@ -6,7 +6,7 @@
 <!-- 2025-02-27 Thu 12:24 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hobbies</title>
+<title>&lrm;</title>
 <meta name="author" content="Gavin" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
@@ -201,38 +201,42 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Hobbies</h1>
-<div id="outline-container-orga478f90" class="outline-2">
-<h2 id="orga478f90">What I Love</h2>
-<div class="outline-text-2" id="text-orga478f90">
-<ul class="org-ul">
-<li>Padding Sports
-<ul class="org-ul">
-<li>I used to be a competitive Sprint Canoe athlete.</li>
-<li>These days I am a recreational Outrigger and SUP paddler</li>
-</ul></li>
-<li><a href="https://www.youtube.com/watch?v=0-brF21ShRk">Org Mode</a>
-<ul class="org-ul">
-<li>This site is written in it actually</li>
-</ul></li>
-<li><a href="https://www.youtube.com/watch?v=K5mBOUEj10I">Emacs</a>
-<ul class="org-ul">
-<li>My text editor (and OS 😏)</li>
-</ul></li>
-<li><a href="https://www.youtube.com/watch?v=GWdf1flcLoM">Lisp</a></li>
-<li><a href="https://www.youtube.com/watch?v=6qz9Ajun2nM">Haskell</a></li>
-</ul>
+<div id="outline-container-org152fb21" class="outline-2">
+<h2 id="org152fb21"><span class="timestamp-wrapper"><span class="timestamp">&lt;2025-02-27 Thu&gt; </span></span> Time Tracking</h2>
+<div class="outline-text-2" id="text-org152fb21">
+<p>
+Today I decided to start doing proper time tracking
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(when-let ((idle-checker (executable-find "xprintidle")))
+  (setq org-clock-x11idle-program-name idle-checker))
+(setopt org-clock-idle-time 60)
+(setopt org-clock-clocked-in-display 'frame-title)
+(setopt org-clock-persist t)
+(setopt org-clock-in-resume t)
+</pre>
 </div>
+
+<p>
+This was my basic setup
+</p>
+
+<p>
+I also added in <code>org-pomodoro</code> since I wanted to better integrate
+pomodoro into my workflow
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package org-pomodoro
+    :ensure t
+    :bind (:map org-mode-map
+                ("C-c C-x i" . org-pomodoro) )
+    :config
+    (setopt org-pomodoro-length 20)
+    (setopt org-pomodoro-long-break-length 15)
+    (setopt org-pomodoro-format "pom~%s"))
+</pre>
 </div>
-<div id="outline-container-org64a2efa" class="outline-2">
-<h2 id="org64a2efa">Topics Of Interest</h2>
-<div class="outline-text-2" id="text-org64a2efa">
-<ul class="org-ul">
-<li>Compilers</li>
-<li>Programming Languages</li>
-<li>The Restaurant Industry</li>
-<li>Knowledge Managment</li>
-</ul>
 </div>
 </div>
 </div>
