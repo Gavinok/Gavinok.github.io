@@ -3,11 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-27 Thu 12:24 -->
+<!-- 2025-06-18 Wed 09:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
-<meta name="author" content="Gavin" />
+<meta name="author" content="QLF00G4T23103FB" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -201,20 +201,20 @@
 </head>
 <body>
 <div id="content" class="content">
-<div id="outline-container-org152fb21" class="outline-2">
-<h2 id="org152fb21"><span class="timestamp-wrapper"><span class="timestamp">&lt;2025-02-27 Thu&gt; </span></span> Time Tracking</h2>
-<div class="outline-text-2" id="text-org152fb21">
+<div id="outline-container-org3f8f181" class="outline-2">
+<h2 id="org3f8f181"><span class="timestamp-wrapper"><span class="timestamp">&lt;2025-02-27 Thu&gt; </span></span> Time Tracking</h2>
+<div class="outline-text-2" id="text-org3f8f181">
 <p>
 Today I decided to start doing proper time tracking
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(when-let ((idle-checker (executable-find "xprintidle")))
-  (setq org-clock-x11idle-program-name idle-checker))
-(setopt org-clock-idle-time 60)
-(setopt org-clock-clocked-in-display 'frame-title)
-(setopt org-clock-persist t)
-(setopt org-clock-in-resume t)
+<pre class="src src-emacs-lisp"><span style="color: #444444;">(</span><span style="color: #8197bf;">when-let</span> <span style="color: #444444;">((</span>idle-checker <span style="color: #444444;">(</span>executable-find <span style="color: #a1bf78;">"xprintidle"</span><span style="color: #444444;">)))</span>
+  <span style="color: #444444;">(</span><span style="color: #8197bf;">setq</span> org-clock-x11idle-program-name idle-checker<span style="color: #444444;">))</span>
+<span style="color: #444444;">(</span><span style="color: #8197bf;">setopt</span> org-clock-idle-time 60<span style="color: #444444;">)</span>
+<span style="color: #444444;">(</span><span style="color: #8197bf;">setopt</span> org-clock-clocked-in-display 'frame-title<span style="color: #444444;">)</span>
+<span style="color: #444444;">(</span><span style="color: #8197bf;">setopt</span> org-clock-persist t<span style="color: #444444;">)</span>
+<span style="color: #444444;">(</span><span style="color: #8197bf;">setopt</span> org-clock-in-resume t<span style="color: #444444;">)</span>
 </pre>
 </div>
 
@@ -227,14 +227,14 @@ I also added in <code>org-pomodoro</code> since I wanted to better integrate
 pomodoro into my workflow
 </p>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(use-package org-pomodoro
-    :ensure t
-    :bind (:map org-mode-map
-                ("C-c C-x i" . org-pomodoro) )
-    :config
-    (setopt org-pomodoro-length 20)
-    (setopt org-pomodoro-long-break-length 15)
-    (setopt org-pomodoro-format "pom~%s"))
+<pre class="src src-emacs-lisp"><span style="color: #444444;">(</span><span style="color: #8197bf;">use-package</span> org-pomodoro
+    <span style="color: #7D8FA3;">:ensure</span> t
+    <span style="color: #7D8FA3;">:bind</span> <span style="color: #444444;">(</span><span style="color: #7D8FA3;">:map</span> org-mode-map
+                <span style="color: #444444;">(</span><span style="color: #a1bf78;">"C-c C-x i"</span> . org-pomodoro<span style="color: #444444;">)</span> <span style="color: #444444;">)</span>
+    <span style="color: #7D8FA3;">:config</span>
+    <span style="color: #444444;">(</span><span style="color: #8197bf;">setopt</span> org-pomodoro-length 20<span style="color: #444444;">)</span>
+    <span style="color: #444444;">(</span><span style="color: #8197bf;">setopt</span> org-pomodoro-long-break-length 15<span style="color: #444444;">)</span>
+    <span style="color: #444444;">(</span><span style="color: #8197bf;">setopt</span> org-pomodoro-format <span style="color: #a1bf78;">"pom~%s"</span><span style="color: #444444;">))</span>
 </pre>
 </div>
 </div>
